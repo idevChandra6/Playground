@@ -4,6 +4,3 @@ machine:
     XCODE_WORKSPACE: CircleCI-Sample.xcworkspace
     DEVELOPER_NAME: Chandra Polepeddi
     APPNAME: QR
-deployment:
-  testflight:
-    branch: master
