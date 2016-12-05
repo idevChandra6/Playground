@@ -1,6 +1,5 @@
 machine:
   environment:
     XCODE_SCHEME: QR
-    XCODE_WORKSPACE: CircleCI-Sample.xcworkspace
     DEVELOPER_NAME: Chandra Polepeddi
     APPNAME: QR
