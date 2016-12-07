@@ -29,3 +29,13 @@ echo "********************"
 env
 
 xcodebuild -project QR.xcodeproj -showBuildSettings
+
+echo "********************"
+echo "*    BUILT_PRODUCTS_DIR   *"
+echo "********************"
+cd $BUILT_PRODUCTS_DIR; ls -ltra
+
+cd $DERIVED_FILES_DIR; echo "=== $PWD"; ls -ltra
+cd $DERIVED_FILE_DIR; echo "=== $PWD"; ls -ltra
+cd $DERIVED_SOURCES_DIR; echo "=== $PWD"; ls -ltra
+cd $FRAMEWORKS_FOLDER_PATH; echo "==== $PWD"; ls -ltra
