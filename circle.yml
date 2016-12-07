@@ -1,6 +1,7 @@
 machine:
   environment:
     XCODE_SCHEME: QR
+    XCODE_PROJECT: QR.xcodeproj
     DEVELOPER_NAME: Chandra Polepeddi
     APPNAME: QR
 
@@ -14,7 +15,7 @@ machine:
 
 deployment:
   commands:
-    - xcodebuild -project QR.xcodeproj -scheme QR -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+    - bash build.sh
 test:
   override:
     - echo "Tests are overridden"
