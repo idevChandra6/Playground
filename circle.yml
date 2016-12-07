@@ -14,7 +14,7 @@ machine:
 
 deployment:
   commands:
-    xcodebuild -project QR.xcodeproj -scheme QR -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+    - xcodebuild -project QR.xcodeproj -scheme QR -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 test:
   override:
     - echo "Tests are overridden"
