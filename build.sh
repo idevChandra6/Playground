@@ -23,7 +23,7 @@ echo "********************"
 echo "*    ENVIRONMENT   *"
 echo "********************"
 env
-
+JUMPBACK=`pwd`
 xcodebuild -project QR.xcodeproj -showBuildSettings
 
 echo "********************"
@@ -36,6 +36,7 @@ cd $DERIVED_FILE_DIR; echo "=== $PWD"; ls -ltra
 cd $DERIVED_SOURCES_DIR; echo "=== $PWD"; ls -ltra
 cd $FRAMEWORKS_FOLDER_PATH; echo "==== $PWD"; ls -ltra
 
+cd $JUMPBACK
 echo "********************"
 echo "*     Archive      *"
 echo "********************"
