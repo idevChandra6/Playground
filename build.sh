@@ -18,10 +18,6 @@ DSYM_DIR="$ARCHIVE_PATH/dSYMs"
 echo "=== Dynamic Symbols Diretory ==="
 echo $DSYM_DIR
 
-echo "********************"
-echo "*     Archive      *"
-echo "********************"
-xcodebuild -scheme "$XCODE_SCHEME" -project "$XCODE_PROJECT" -archivePath "$ARCHIVE_PATH" clean archive
 
 echo "********************"
 echo "*    ENVIRONMENT   *"
@@ -39,3 +35,8 @@ cd $DERIVED_FILES_DIR; echo "=== $PWD"; ls -ltra
 cd $DERIVED_FILE_DIR; echo "=== $PWD"; ls -ltra
 cd $DERIVED_SOURCES_DIR; echo "=== $PWD"; ls -ltra
 cd $FRAMEWORKS_FOLDER_PATH; echo "==== $PWD"; ls -ltra
+
+echo "********************"
+echo "*     Archive      *"
+echo "********************"
+xcodebuild -scheme "$XCODE_SCHEME" -project "$XCODE_PROJECT" -archivePath "$ARCHIVE_PATH" clean archive
