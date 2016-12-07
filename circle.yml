@@ -9,9 +9,9 @@ machine:
   xcode:
     version: "8.1"
   environment:
-    XCODE_SCHEME: FrameworkSample
+    XCODE_SCHEME: QR
     DEVELOPER_NAME: Chandra Polepeddi
-    APPNAME: FrameworkSample
+    APPNAME: QR
 
 deployment:
   testflight:
