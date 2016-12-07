@@ -27,5 +27,5 @@ echo "********************"
 echo "*       LIST       *"
 echo "********************"
 
-cd /Users/distiller/Playground/
+cd /Users/distiller/Playground/build.xcarchive
 ls -ltra
