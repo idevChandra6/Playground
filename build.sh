@@ -1,11 +1,31 @@
-#!/bin/sh
-# See Chandra when you are about to modify this.
+echo "=== Present working directory === \n$PWD"
 
 PROVISIONING_PROFILE="$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_UUID.mobileprovision"
-RELEASE_DATE=`date '+%Y-%m-%d %H:%M:%S'`
-ARCHIVE_PATH="$PWD/build.xcarchive"
-APP_DIR="$ARCHIVE_PATH/Products/Applications"
-DSYM_DIR="$ARCHIVE_PATH/dSYMs"
+echo "=== Provisioning Profile: ==="
+echo $PROVISIONING_PROFILE
 
-echo "========= ARCHIVE ========="
-xcodebuild -verbose -scheme $XCODE_SCHEME -project $XCODE_PROJECT ONLY_ACTIVE_ARCH=NO
+ARCHIVE_PATH="$PWD/build.xcarchive"
+echo "=== ARCHIVE PATH ==="
+echo $PROVISIONING_PROFILE
+
+APP_DIR="$ARCHIVE_PATH/Products/Applications"
+echo "=== APP Directory ==="
+echo $APP_DIR
+
+DSYM_DIR="$ARCHIVE_PATH/dSYMs"
+echo "=== Dynamic Symbols Diretory ==="
+echo $DSYM_DIR
+
+echo "********************"
+echo "*     Archive      *"
+echo "********************"
+xcodebuild -scheme "$XCODE_SCHEME" -project "$XCODE_PROJECT" -archivePath "$ARCHIVE_PATH" clean archive CODE_SIGN_IDENTITY="$DEVELOPER_NAME"
+
+echo "********************"
+echo "*     Signing      *"
+echo "********************"
+xcrun -log -sdk iphoneos PackageApplication "$APP_DIR/$APPNAME.app" -o "$APP_DIR/$APPNAME.ipa" -sign "$DEVELOPER_NAME" -embed "$PROVISIONING_PROFILE"
+
+RELEASE_NOTES="Build: $CIRCLE_BUILD_NUM\nUploaded: $RELEASE_DATE"
+
+zip -r -9 "$DSYM_DIR/$APPNAME.app.dSYM.zip" "$DSYM_DIR/$APPNAME.app.dSYM"
