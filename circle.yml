@@ -3,3 +3,17 @@ machine:
     XCODE_SCHEME: QR
     DEVELOPER_NAME: Chandra Polepeddi
     APPNAME: QR
+
+machine:
+  xcode:
+    version: “8.1”
+  environment:
+    XCODE_SCHEME: FrameworkSample
+    DEVELOPER_NAME: Chandra Polepeddi
+    APPNAME: FrameworkSample
+
+build:
+  xcodebuild -project QR.xcodeproj -scheme QR -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+test:
+  override:
+    - echo "Tests are overridden"
