@@ -1,3 +1,5 @@
+XCODE_PROJECT="QR.xcodeproj"
+
 echo "=== Present working directory === \n$PWD"
 
 PROVISIONING_PROFILE="$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_UUID.mobileprovision"
@@ -6,7 +8,7 @@ echo $PROVISIONING_PROFILE
 
 ARCHIVE_PATH="$PWD/build.xcarchive"
 echo "=== ARCHIVE PATH ==="
-echo $PROVISIONING_PROFILE
+echo $ARCHIVE_PATH
 
 APP_DIR="$ARCHIVE_PATH/Products/Applications"
 echo "=== APP Directory ==="
@@ -20,12 +22,3 @@ echo "********************"
 echo "*     Archive      *"
 echo "********************"
 xcodebuild -scheme "$XCODE_SCHEME" -project "$XCODE_PROJECT" -archivePath "$ARCHIVE_PATH" clean archive CODE_SIGN_IDENTITY="$DEVELOPER_NAME"
-
-echo "********************"
-echo "*     Signing      *"
-echo "********************"
-xcrun -log -sdk iphoneos PackageApplication "$APP_DIR/$APPNAME.app" -o "$APP_DIR/$APPNAME.ipa" -sign "$DEVELOPER_NAME" -embed "$PROVISIONING_PROFILE"
-
-RELEASE_NOTES="Build: $CIRCLE_BUILD_NUM\nUploaded: $RELEASE_DATE"
-
-zip -r -9 "$DSYM_DIR/$APPNAME.app.dSYM.zip" "$DSYM_DIR/$APPNAME.app.dSYM"
