@@ -24,8 +24,8 @@ echo "********************"
 xcodebuild -scheme "$XCODE_SCHEME" -project "$XCODE_PROJECT" -archivePath "$ARCHIVE_PATH" clean archive
 
 echo "********************"
-echo "*       LIST       *"
+echo "*    ENVIRONMENT   *"
 echo "********************"
+env
 
-cd /Users/distiller/Playground/build.xcarchive
-ls -ltra
+xcodebuild -project QR.xcodeproj -showBuildSettings
