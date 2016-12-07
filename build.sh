@@ -21,4 +21,11 @@ echo $DSYM_DIR
 echo "********************"
 echo "*     Archive      *"
 echo "********************"
-xcodebuild -scheme "$XCODE_SCHEME" -project "$XCODE_PROJECT" -archivePath "$ARCHIVE_PATH" clean archive 
+xcodebuild -scheme "$XCODE_SCHEME" -project "$XCODE_PROJECT" -archivePath "$ARCHIVE_PATH" clean archive
+
+echo "********************"
+echo "*       LIST       *"
+echo "********************"
+
+cd /Users/distiller/Playground/
+ls -ltra
