@@ -8,4 +8,4 @@ APP_DIR="$ARCHIVE_PATH/Products/Applications"
 DSYM_DIR="$ARCHIVE_PATH/dSYMs"
 
 echo "========= ARCHIVE ========="
-xcodebuild -verbose -scheme $XCODE_SCHEME -project $XCODE_PROJECT -sdk iphonesimulator10.1 -configuration Release archive -archivePath $PWD/build/DDCiOSClient.xcarchive ONLY_ACTIVE_ARCH=NO
+xcodebuild -verbose -scheme $XCODE_SCHEME -project $XCODE_PROJECT ONLY_ACTIVE_ARCH=NO
