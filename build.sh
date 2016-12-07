@@ -21,4 +21,4 @@ echo $DSYM_DIR
 echo "********************"
 echo "*     Archive      *"
 echo "********************"
-xcodebuild -scheme "$XCODE_SCHEME" -project "$XCODE_PROJECT" -archivePath "$ARCHIVE_PATH" clean archive CODE_SIGN_IDENTITY="$DEVELOPER_NAME"
+xcodebuild -scheme "$XCODE_SCHEME" -project "$XCODE_PROJECT" -archivePath "$ARCHIVE_PATH" clean archive 
