@@ -14,8 +14,9 @@ machine:
     APPNAME: FrameworkSample
 
 deployment:
-  commands:
-    - bash build.sh
+  testflight:
+    commands:
+      - bash build.sh
 test:
   override:
     - echo "Tests are overridden"
