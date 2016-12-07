@@ -15,6 +15,7 @@ machine:
 
 deployment:
   testflight:
+    branch: master
     commands:
       - bash build.sh
 test:
