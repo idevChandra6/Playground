@@ -53,6 +53,9 @@ ls -lrta $DERIVED_SOURCES_DIR
 ls -ltra $FRAMEWORKS_FOLDER_PATH
 echo "======= HER OYU GO"
 ls -ltra ~/Playground/
+cd QR.framework
+ls -ltra
+
 
 
 
