@@ -42,4 +42,10 @@ echo "==============" $FRAMEWORKS_FOLDER_PATH
 echo "********************"
 echo "*     Archive      *"
 echo "********************"
-xcodebuild -scheme "$XCODE_SCHEME" -project "$XCODE_PROJECT" -archivePath "$ARCHIVE_PATH" clean archive
+xcodebuild -scheme "$XCODE_SCHEME" -project "$XCODE_PROJECT" -archivePath "$ARCHIVE_PATH" archive
+
+ls -ltra $BUILT_PRODUCTS_DIR;
+ls -ltra $DERIVED_FILES_DIR
+ls -lrat  $DERIVED_FILE_DIR
+ls -lrta $DERIVED_SOURCES_DIR
+ls -ltra $FRAMEWORKS_FOLDER_PATH
