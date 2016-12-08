@@ -53,7 +53,5 @@ echo "======= HER OYU GO"
 echo "==== SHELL IS " $SHELL
 
 ls -ltra ~/Playground/
-cd QR.framework
-ls -ltra
 zip -r QR.framework.zip QR.framework
 cp QR.framework.zip $CIRCLE_ARTIFACTS
