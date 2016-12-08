@@ -33,14 +33,12 @@ echo "+++++++++++++++++++++++++++"
 echo "********************"
 echo "*    BUILT_PRODUCTS_DIR   *"
 echo "********************"
-cd $BUILT_PRODUCTS_DIR; ls -ltra
+echo "==============" $BUILT_PRODUCTS_DIR
+echo "==============" $DERIVED_FILES_DIR
+echo "=============="  $DERIVED_FILE_DIR
+echo "==============" $DERIVED_SOURCES_DIR
+echo "==============" $FRAMEWORKS_FOLDER_PATH
 
-cd $DERIVED_FILES_DIR; echo "=== $PWD"; ls -ltra
-cd $DERIVED_FILE_DIR; echo "=== $PWD"; ls -ltra
-cd $DERIVED_SOURCES_DIR; echo "=== $PWD"; ls -ltra
-cd $FRAMEWORKS_FOLDER_PATH; echo "==== $PWD"; ls -ltra
-
-cd $JUMPBACK
 echo "********************"
 echo "*     Archive      *"
 echo "********************"
