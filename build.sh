@@ -46,7 +46,7 @@ xcodebuild -scheme "$XCODE_SCHEME" -project "$XCODE_PROJECT" -archivePath "$ARCH
 
 cp
 ls -ltra $BUILT_PRODUCTS_DIR/ArchiveIntermediates/QR/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/
-cp -rf /Users/distiller/Library/Developer/Xcode/DerivedData/QR-askpqxaeauirebgwdvhyjvcacmoh/Build/Intermediates/ArchiveIntermediates/QR/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/QR.framework ~/Playground/
+cp -R  /Users/distiller/Library/Developer/Xcode/DerivedData/QR-askpqxaeauirebgwdvhyjvcacmoh/Build/Intermediates/ArchiveIntermediates/QR/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/QR.framework ~/Playground/
 ls -ltra $DERIVED_FILES_DIR
 ls -lrat  $DERIVED_FILE_DIR
 ls -lrta $DERIVED_SOURCES_DIR
