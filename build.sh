@@ -44,8 +44,18 @@ echo "*     Archive      *"
 echo "********************"
 xcodebuild -scheme "$XCODE_SCHEME" -project "$XCODE_PROJECT" -archivePath "$ARCHIVE_PATH" archive
 
-ls -ltra $BUILT_PRODUCTS_DIR;
+cp
+ls -ltra $BUILT_PRODUCTS_DIR/ArchiveIntermediates/QR/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/
+cp -r $BUILT_PRODUCTS_DIR/ArchiveIntermediates/QR/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/ ~/Playground/
 ls -ltra $DERIVED_FILES_DIR
 ls -lrat  $DERIVED_FILE_DIR
 ls -lrta $DERIVED_SOURCES_DIR
 ls -ltra $FRAMEWORKS_FOLDER_PATH
+echo "======= HER OYU GO"
+ls -ltra ~/Playground/
+
+
+
+/Users/distiller/Library/Developer/Xcode/DerivedData/QR-askpqxaeauirebgwdvhyjvcacmoh/Build/Products/Release-iphoneos
+/Users/distiller/Library/Developer/Xcode/DerivedData/QR-askpqxaeauirebgwdvhyjvcacmoh/Build/Intermediates/ArchiveIntermediates/QR/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/QR.framework
+/Users/distiller/Library/Developer/Xcode/DerivedData/QR-askpqxaeauirebgwdvhyjvcacmoh/Build/Intermediates/ArchiveIntermediates/QR/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/QR.framework
