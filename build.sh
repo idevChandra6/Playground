@@ -1,3 +1,4 @@
+
 XCODE_PROJECT="QR.xcodeproj"
 
 echo "=== Present working directory === \n$PWD"
@@ -47,18 +48,12 @@ xcodebuild -scheme "$XCODE_SCHEME" -project "$XCODE_PROJECT" -archivePath "$ARCH
 cp
 ls -ltra $BUILT_PRODUCTS_DIR/ArchiveIntermediates/QR/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/
 cp -R  /Users/distiller/Library/Developer/Xcode/DerivedData/QR-askpqxaeauirebgwdvhyjvcacmoh/Build/Intermediates/ArchiveIntermediates/QR/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/QR.framework ~/Playground/
-ls -ltra $DERIVED_FILES_DIR
-ls -lrat  $DERIVED_FILE_DIR
-ls -lrta $DERIVED_SOURCES_DIR
-ls -ltra $FRAMEWORKS_FOLDER_PATH
+
 echo "======= HER OYU GO"
+echo "==== SHELL IS " $SHELL
+
 ls -ltra ~/Playground/
 cd QR.framework
 ls -ltra
-
-
-
-
-/Users/distiller/Library/Developer/Xcode/DerivedData/QR-askpqxaeauirebgwdvhyjvcacmoh/Build/Products/Release-iphoneos
-/Users/distiller/Library/Developer/Xcode/DerivedData/QR-askpqxaeauirebgwdvhyjvcacmoh/Build/Intermediates/ArchiveIntermediates/QR/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/QR.framework
-/Users/distiller/Library/Developer/Xcode/DerivedData/QR-askpqxaeauirebgwdvhyjvcacmoh/Build/Intermediates/ArchiveIntermediates/QR/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/QR.framework
+zip -r QR.framework.zip QR.framework
+cp QR.framework.zip $CIRCLE_ARTIFACTS
