@@ -23,8 +23,12 @@ echo "********************"
 echo "*    ENVIRONMENT   *"
 echo "********************"
 env
-JUMPBACK=`pwd`
-xcodebuild -project QR.xcodeproj -showBuildSettings
+xcodebuild -project QR.xcodeproj -showBuildSettings >> environ.sh
+sed -i -e 's/ = /=/g' environ.sh
+source environ.sh
+echo "+++++++++++++++++++++++++++"
+cat environ.sh
+echo "+++++++++++++++++++++++++++"
 
 echo "********************"
 echo "*    BUILT_PRODUCTS_DIR   *"
