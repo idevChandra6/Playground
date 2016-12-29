@@ -52,6 +52,7 @@ cp -R  /Users/distiller/Library/Developer/Xcode/DerivedData/QR-askpqxaeauirebgwd
 echo "======= HER OYU GO"
 echo "==== SHELL IS " $SHELL
 
+echo "PROJECT_TEMP_DIR is $PROJECT_TEMP_DIR"
 ls -ltra ~/Playground/
 zip -r QR.framework.zip QR.framework
 cp QR.framework.zip $CIRCLE_ARTIFACTS
