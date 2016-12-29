@@ -1,1 +1,1 @@
-xcodebuild -project QR.xcodeproj 
+install: ./build.sh
