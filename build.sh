@@ -43,16 +43,16 @@ echo "==============" $FRAMEWORKS_FOLDER_PATH
 echo "********************"
 echo "*     Archive      *"
 echo "********************"
-xcodebuild -scheme "$XCODE_SCHEME" -project "$XCODE_PROJECT" -archivePath "$ARCHIVE_PATH" archive
+#xcodebuild -scheme "$XCODE_SCHEME" -project "$XCODE_PROJECT" -archivePath "$ARCHIVE_PATH" archive
 
-cp
-ls -ltra $BUILT_PRODUCTS_DIR/ArchiveIntermediates/QR/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/
-cp -R  /Users/distiller/Library/Developer/Xcode/DerivedData/QR-askpqxaeauirebgwdvhyjvcacmoh/Build/Intermediates/ArchiveIntermediates/QR/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/QR.framework ~/Playground/
+#cp
+#ls -ltra $BUILT_PRODUCTS_DIR/ArchiveIntermediates/QR/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/
+#cp -R  /Users/distiller/Library/Developer/Xcode/DerivedData/QR-askpqxaeauirebgwdvhyjvcacmoh/Build/Intermediates/ArchiveIntermediates/QR/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/QR.framework ~/Playground/
 
 echo "======= HER OYU GO"
 echo "==== SHELL IS " $SHELL
 
 echo "PROJECT_TEMP_DIR is $PROJECT_TEMP_DIR"
-ls -ltra ~/Playground/
-zip -r QR.framework.zip QR.framework
-cp QR.framework.zip $CIRCLE_ARTIFACTS
+#ls -ltra ~/Playground/
+#zip -r QR.framework.zip QR.framework
+#cp QR.framework.zip $CIRCLE_ARTIFACTS
